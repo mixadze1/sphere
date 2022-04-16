@@ -21,7 +21,7 @@ public class WayCreate : MonoBehaviour
             Instantiate(wayPrefab[count], way.position,Quaternion.identity);                   
             way.position += offSet; 
         }
-        Instantiate(Finish, way.position - offSet, Quaternion.identity);
+        Instantiate(Finish, way.position, Quaternion.identity);
     }
   
 }

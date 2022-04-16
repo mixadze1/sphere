@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : ClickManager
+public class PlayerController : MonoBehaviour
 {
     [SerializeField] private Rigidbody rigidbody;
     [SerializeField] private Vector3 startPosition;
@@ -37,7 +37,7 @@ public class PlayerController : ClickManager
             if (Input.GetKey(KeyCode.D))
             {
                 MoveLeft(oppositeSide = true);
-            }
+            }   
         }
     }
     private void MoveForward(bool oppositeSide) // 1 methodom cdelat
@@ -66,6 +66,7 @@ public class PlayerController : ClickManager
     }
     public void RestartGame()
     {
+        rigidbody.isKinematic = true;
         rigidbody.position = startPosition;
         isFinish = false;
         rigidbody.velocity = new Vector3(0,0,0);
