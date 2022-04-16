@@ -15,6 +15,7 @@ public class Finish : MonoBehaviour
             controller.IsFinish = true;
             isWin = true;
             finishGame.StartFinish(isWin);
+            playerRigidbody.isKinematic = true;
         }
     }
 }

@@ -55,14 +55,15 @@
   <ItemGroup>
     <Compile Include="Assets\_Scripts\Score.cs" />
     <Compile Include="Assets\_Scripts\Gameplay\PlayerController.cs" />
+    <Compile Include="Assets\FinishGame.cs" />
     <Compile Include="Assets\_Scripts\Gameplay\WayCreate.cs" />
-    <Compile Include="Assets\_Scripts\UI\UIManager.cs" />
+    <Compile Include="Assets\_Scripts\Gameplay\Lose.cs" />
+    <Compile Include="Assets\_Scripts\UI\StartGameMenu.cs" />
     <Compile Include="Assets\_Scripts\Gameplay\ClickManager.cs" />
+    <Compile Include="Assets\_Scripts\Gameplay\CameraMove.cs" />
     <Compile Include="Assets\_Scripts\LevelManager.cs" />
     <Compile Include="Assets\_Scripts\Gameplay\Finish.cs" />
-    <Compile Include="Assets\_Scripts\Gameplay\Lose.cs" />
-    <Compile Include="Assets\FinishGame.cs" />
-    <Compile Include="Assets\_Scripts\Gameplay\CameraMove.cs" />
+    <Compile Include="Assets\_Scripts\UI\ResultMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
