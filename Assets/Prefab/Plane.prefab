@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 571702432169156999}
   m_Layer: 0
   m_Name: colliderLose
-  m_TagString: Untagged
+  m_TagString: Lose
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

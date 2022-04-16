@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{42D5B2A0-3EF6-6E97-8AFF-3222391D57DF}</ProjectGuid>
+    <ProjectGuid>{E5C00A68-E6DB-FEA3-938C-F34D364EA738}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -53,11 +53,16 @@
     <UnityVersion>2020.3.26f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\_Scripts\Gameplay\PlayerController.cs" />
     <Compile Include="Assets\_Scripts\Score.cs" />
+    <Compile Include="Assets\_Scripts\Gameplay\PlayerController.cs" />
     <Compile Include="Assets\_Scripts\Gameplay\WayCreate.cs" />
-    <Compile Include="Assets\_Scripts\Gameplay\ClickManager.cs" />
     <Compile Include="Assets\_Scripts\UI\UIManager.cs" />
+    <Compile Include="Assets\_Scripts\Gameplay\ClickManager.cs" />
+    <Compile Include="Assets\_Scripts\LevelManager.cs" />
+    <Compile Include="Assets\_Scripts\Gameplay\Finish.cs" />
+    <Compile Include="Assets\_Scripts\Gameplay\Lose.cs" />
+    <Compile Include="Assets\FinishGame.cs" />
+    <Compile Include="Assets\_Scripts\Gameplay\CameraMove.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
