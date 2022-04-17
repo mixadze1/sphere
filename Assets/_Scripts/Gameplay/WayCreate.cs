@@ -8,11 +8,14 @@ public class WayCreate : MonoBehaviour
     [SerializeField] private GameObject Finish;
     [SerializeField] private Transform way;
     [SerializeField] private Vector3 offSet; 
+
     private int count;
+
     private void Start()
     {
         StartCoroutine(spawnWay());
     }
+
     IEnumerator spawnWay()
     {
         for (count = 0; count < wayPrefab.Count; count++)

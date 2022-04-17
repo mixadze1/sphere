@@ -11,11 +11,13 @@ public class FinishGame : MonoBehaviour
     public void StartFinish(bool checkMenu)
     {
         ResultMenu.SetActive(true);
+
         if (checkMenu == true)
         {
             winMenu.SetActive(true);
             loseMenu.SetActive(false);
         }
+
         else
         {
             winMenu.SetActive(false);

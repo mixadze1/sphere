@@ -4,11 +4,13 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private ResultMenu resultMenu;
     [SerializeField] private Rigidbody rigidbody;
+
     [SerializeField] private Vector3 startPosition;
     [SerializeField] private Vector3 speedWS;
     [SerializeField] private Vector3 speedAD;
-    private bool oppositeSide;
+
     private bool isCanMove;
+
     public bool IsCanMove { get => isCanMove; set => isCanMove = value; }
 
     private void Awake()
@@ -21,28 +23,34 @@ public class PlayerController : MonoBehaviour
     {
         if (isCanMove)
         {
+
             if (Input.GetKey(KeyCode.W))
             {
-                MoveWS(oppositeSide = false);
+                MoveWS(false);
             }
+
             if (Input.GetKey(KeyCode.S))
             {
-                MoveWS(oppositeSide = true);
+                MoveWS(true);
             }
+
             if (Input.GetKey(KeyCode.A))
             {
-                MoveAD(oppositeSide = false);
+                MoveAD(false);
             }
+
             if (Input.GetKey(KeyCode.D))
             {
-                MoveAD(oppositeSide = true);
+                MoveAD(true);
             }
+
             if (Input.GetKey(KeyCode.Escape))
             {
                 resultMenu.Restart();
             }
         }
     }
+
     private void MoveWS(bool oppositeSide)
     {
         if (!oppositeSide)
@@ -71,7 +79,6 @@ public class PlayerController : MonoBehaviour
     {
         rigidbody.isKinematic = true;
         rigidbody.position = startPosition;
-        isCanMove = true;
         rigidbody.velocity = startPosition;
         rigidbody.isKinematic = false;
         isCanMove = false;

@@ -12,10 +12,15 @@ public class Score : MonoBehaviour
     [SerializeField] private TextMeshProUGUI timeBestScore;
     [SerializeField] private TextMeshProUGUI bestScore;
     [SerializeField] private GameObject player;
+
     private Action scoreActivate;
+
     private float bestPosition;
+
     private int time = 0;
+
     public Action ScoreActivate { get => scoreActivate; set => scoreActivate = value; }
+
     private void Start()
     {
         scoreActivate = Coroutine;
@@ -41,6 +46,7 @@ public class Score : MonoBehaviour
             while (playerController.IsCanMove == true)
             {
                 yield return new WaitForSeconds(0.1f);
+
                 if (player.transform.position.z > bestPosition)
                 { 
                     bestPosition = player.transform.position.z; 
@@ -72,10 +78,12 @@ public class Score : MonoBehaviour
             }
 
         }
+
         if (PlayerPrefs.GetInt("BestTime") <= 0)
         {
             PlayerPrefs.SetInt("BestTime", time);
         }
+
         else if (PlayerPrefs.GetInt("BestTime") > PlayerPrefs.GetInt("Time"))
         {
             PlayerPrefs.SetInt("BestTime", time-1);
@@ -92,7 +100,7 @@ public class Score : MonoBehaviour
     }
 
     private void BestTime()
-            {
+    {
         timeBestScore.text = PlayerPrefs.GetInt("BestTime").ToString();
-            }
+    }
 }
