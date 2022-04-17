@@ -13,7 +13,7 @@ public class Lose : MonoBehaviour
         {
             playerRigidbody.TryGetComponent(out PlayerController controller);
             playerRigidbody.TryGetComponent(out FinishGame finishGame);
-            controller.IsFinish = true;
+            controller.IsCanMove = false;
             finishGame.StartFinish(isLose);
             playerRigidbody.isKinematic = true;
         }

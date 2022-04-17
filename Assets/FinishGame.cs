@@ -7,6 +7,7 @@ public class FinishGame : MonoBehaviour
     [SerializeField] private GameObject winMenu;
     [SerializeField] private GameObject loseMenu;
     [SerializeField] private GameObject ResultMenu;
+
     public void StartFinish(bool checkMenu)
     {
         ResultMenu.SetActive(true);

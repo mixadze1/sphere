@@ -9,38 +9,38 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Vector3 speedWS;
     [SerializeField] private Vector3 speedAD;
     private bool oppositeSide;
-    private bool isFinish;
-    public bool IsFinish { get => isFinish; set => isFinish = value; }
+    private bool isCanMove;
+    public bool IsCanMove { get => isCanMove; set => isCanMove = value; }
 
     private void Awake()
     {
         rigidbody.position = startPosition;
-        isFinish = true;
+        isCanMove = false;
        
     }
     private void FixedUpdate()
     {
-        if (!isFinish)
+        if (isCanMove)
         {
             if (Input.GetKey(KeyCode.W))
             {
-                MoveForward(oppositeSide = false);
+                MoveWS(oppositeSide = false);
             }
             if (Input.GetKey(KeyCode.S))
             {
-                MoveForward(oppositeSide = true);
+                MoveWS(oppositeSide = true);
             }
             if (Input.GetKey(KeyCode.A))
             {
-                MoveLeft(oppositeSide = false);
+                MoveAD(oppositeSide = false);
             }
             if (Input.GetKey(KeyCode.D))
             {
-                MoveLeft(oppositeSide = true);
+                MoveAD(oppositeSide = true);
             }   
         }
     }
-    private void MoveForward(bool oppositeSide) // 1 methodom cdelat
+    private void MoveWS(bool oppositeSide)
     {
         if (!oppositeSide)
         { 
@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
             rigidbody.velocity -= speedWS;
         }
     }
-    private void MoveLeft(bool oppositeSide)
+    private void MoveAD(bool oppositeSide)
     {
         if (!oppositeSide)
         {
@@ -68,9 +68,9 @@ public class PlayerController : MonoBehaviour
     {
         rigidbody.isKinematic = true;
         rigidbody.position = startPosition;
-        isFinish = false;
+        isCanMove = true;
         rigidbody.velocity = new Vector3(0,0,0);
         rigidbody.isKinematic = false;
-        isFinish = true;
+        isCanMove = false;
     } 
 }

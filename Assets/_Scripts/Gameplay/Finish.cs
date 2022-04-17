@@ -12,7 +12,7 @@ public class Finish : MonoBehaviour
         {
             playerRigidbody.TryGetComponent(out PlayerController controller);
             playerRigidbody.TryGetComponent(out FinishGame finishGame);
-            controller.IsFinish = true;
+            controller.IsCanMove = false;
             isWin = true;
             finishGame.StartFinish(isWin);
             playerRigidbody.isKinematic = true;

@@ -6,6 +6,7 @@ public class StartGameMenu : MonoBehaviour
 {
     [SerializeField] private GameObject[] gameModeButtons;
     [SerializeField] private PlayerController playerController;
+    [SerializeField] private Score score;
     public void StartGame()
     {
         
@@ -13,7 +14,8 @@ public class StartGameMenu : MonoBehaviour
         {
             gameModeButtons[count].SetActive(false);
         }
-        playerController.IsFinish = false;
+        playerController.IsCanMove = true;
+        score.ScoreActivate.Invoke();
     }
     public void ResultMenu()
     {
