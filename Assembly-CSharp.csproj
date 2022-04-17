@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{E5C00A68-E6DB-FEA3-938C-F34D364EA738}</ProjectGuid>
+    <ProjectGuid>{061F9920-037F-767A-C24B-709FFF9F4609}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -55,7 +55,7 @@
   <ItemGroup>
     <Compile Include="Assets\_Scripts\Score.cs" />
     <Compile Include="Assets\_Scripts\Gameplay\PlayerController.cs" />
-    <Compile Include="Assets\FinishGame.cs" />
+    <Compile Include="Assets\_Scripts\Gameplay\FinishGame.cs" />
     <Compile Include="Assets\_Scripts\Gameplay\WayCreate.cs" />
     <Compile Include="Assets\_Scripts\Gameplay\Lose.cs" />
     <Compile Include="Assets\_Scripts\UI\StartGameMenu.cs" />
