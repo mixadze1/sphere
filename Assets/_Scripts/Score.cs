@@ -72,7 +72,7 @@ public class Score : MonoBehaviour
             }
 
         }
-        if (PlayerPrefs.GetInt("BestTime") == 0)
+        if (PlayerPrefs.GetInt("BestTime") <= 0)
         {
             PlayerPrefs.SetInt("BestTime", time);
         }
